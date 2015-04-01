@@ -41,17 +41,21 @@
 
 <div class='container'>
   <div class='heading'>
-    <h1>OL3Pickr</h1>
+    <h1>OpenLayers Online Build Tool</h1>
   </div>
   <div class="row description">
-    <div class="col-sm-7 col-md-8 lead">
+    <div class="col-sus7 col-md-8 lead">
       Choose components for your custom build of OL3.
     </div>
     <div class="col-sm-5 col-md-4">
-      <button type="submit" id="btn-compile" class="btn btn-md btn-outline">  Compile &amp; Download Selected <span class="reallybig">&#187;</span>
-      </button>
+      <a href="" type="submit" id="btn-compile" class="btn btn-md btn-outline" data-loading-text="Building...">
+        <span class="status">Compile &amp; Download Selected</span>
+        <span class="status-icon"></span>
+      </a>
     </div>
   </div>
+  <div class="build-success alert alert-success" style="display: none;" role="alert"></div>
+  <div class="build-error alert alert-success" style="display: none;" role="alert"></div>
   <form action="" method="post" id="compile">
     <div class="row">
       <div class="col-sm-6">
@@ -316,13 +320,6 @@ manipulation. " data-placement="right" data-trigger="hover">
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.Collection#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.Collection#changed"/>
   
     <label class="is-function">changed</label>
@@ -541,13 +538,6 @@ http://www.w3.org/TR/orientation-event/) for more details.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.DeviceOrientation#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.DeviceOrientation#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -951,13 +941,6 @@ GeoJSON.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.Feature#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.Feature#changed"/>
   
     <label class="is-function">changed</label>
@@ -1250,13 +1233,6 @@ temporary basis, for example highlighting. " data-placement="right" data-trigger
   <input class="toggle-symbol " align="" type="checkbox" value="ol.Geolocation#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.Geolocation#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -1815,13 +1791,6 @@ temporary basis, for example highlighting. " data-placement="right" data-trigger
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.Map#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.Map#changed"/>
   
     <label class="is-function">changed</label>
@@ -2094,13 +2063,6 @@ instantiated in apps.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.Object#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.Object#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -2382,13 +2344,6 @@ instantiated in apps.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.Overlay#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.Overlay#changed"/>
   
     <label class="is-function">changed</label>
@@ -2654,13 +2609,6 @@ instantiated in apps.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.View#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.View#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -4167,13 +4115,6 @@ ol.geom.Polygon.circular}.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.BingMaps#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.BingMaps#changed"/>
   
     <label class="is-function">changed</label>
@@ -4412,13 +4353,6 @@ ol.geom.Polygon.circular}.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.Cluster#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.Cluster#changed"/>
   
     <label class="is-function">changed</label>
@@ -4648,13 +4582,6 @@ ol.geom.Polygon.circular}.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.FormatVector#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.FormatVector#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -4897,13 +4824,6 @@ ol.geom.Polygon.circular}.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.GeoJSON#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.GeoJSON#changed"/>
   
     <label class="is-function">changed</label>
@@ -5138,13 +5058,6 @@ ol.geom.Polygon.circular}.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.GPX#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.GPX#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -5387,13 +5300,6 @@ ol.geom.Polygon.circular}.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.IGC#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.IGC#changed"/>
   
     <label class="is-function">changed</label>
@@ -5537,13 +5443,6 @@ ol.geom.Polygon.circular}.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.ImageCanvas#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.ImageCanvas#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -5723,13 +5622,6 @@ ol.geom.Polygon.circular}.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.ImageMapGuide#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.ImageMapGuide#changed"/>
   
     <label class="is-function">changed</label>
@@ -5875,13 +5767,6 @@ instantiated in apps.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.Image#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.Image#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -6052,13 +5937,6 @@ instantiated in apps.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.ImageStatic#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.ImageStatic#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -6235,13 +6113,6 @@ read from a vector source (&#x60;ol.source.Vector&#x60;) are drawn. " data-place
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.ImageVector#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.ImageVector#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -6438,13 +6309,6 @@ read from a vector source (&#x60;ol.source.Vector&#x60;) are drawn. " data-place
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.ImageWMS#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.ImageWMS#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -6687,13 +6551,6 @@ read from a vector source (&#x60;ol.source.Vector&#x60;) are drawn. " data-place
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.KML#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.KML#changed"/>
   
     <label class="is-function">changed</label>
@@ -6886,13 +6743,6 @@ read from a vector source (&#x60;ol.source.Vector&#x60;) are drawn. " data-place
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.MapQuest#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.MapQuest#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -7090,13 +6940,6 @@ read from a vector source (&#x60;ol.source.Vector&#x60;) are drawn. " data-place
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.OSM#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.OSM#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -7335,13 +7178,6 @@ read from a vector source (&#x60;ol.source.Vector&#x60;) are drawn. " data-place
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.OSMXML#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.OSMXML#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -7585,13 +7421,6 @@ read in the data from a remote server." data-placement="right" data-trigger="hov
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.ServerVector#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.ServerVector#changed"/>
   
     <label class="is-function">changed</label>
@@ -7737,13 +7566,6 @@ instantiated in apps.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.Source#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.Source#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -7933,13 +7755,6 @@ instantiated in apps.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.Stamen#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.Stamen#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -8183,13 +7998,6 @@ a file or other static source." data-placement="right" data-trigger="hover">
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.StaticVector#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.StaticVector#changed"/>
   
     <label class="is-function">changed</label>
@@ -8407,13 +8215,6 @@ a file or other static source." data-placement="right" data-trigger="hover">
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.TileArcGISRest#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.TileArcGISRest#changed"/>
   
     <label class="is-function">changed</label>
@@ -8566,13 +8367,6 @@ each tile. " data-placement="right" data-trigger="hover">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.TileDebug#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.TileDebug#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -8759,13 +8553,6 @@ each tile. " data-placement="right" data-trigger="hover">
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.TileImage#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.TileImage#changed"/>
   
     <label class="is-function">changed</label>
@@ -8948,13 +8735,6 @@ each tile. " data-placement="right" data-trigger="hover">
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.TileJSON#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.TileJSON#changed"/>
   
     <label class="is-function">changed</label>
@@ -9107,13 +8887,6 @@ instantiated in apps.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.Tile#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.Tile#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -9309,13 +9082,6 @@ instantiated in apps.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.TileUTFGrid#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.TileUTFGrid#changed"/>
   
     <label class="is-function">changed</label>
@@ -9502,13 +9268,6 @@ into tiles in a fixed grid pattern." data-placement="right" data-trigger="hover"
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.TileVector#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.TileVector#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -9733,13 +9492,6 @@ into tiles in a fixed grid pattern." data-placement="right" data-trigger="hover"
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.TileWMS#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.TileWMS#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -9982,13 +9734,6 @@ into tiles in a fixed grid pattern." data-placement="right" data-trigger="hover"
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.TopoJSON#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.TopoJSON#changed"/>
   
     <label class="is-function">changed</label>
@@ -10216,13 +9961,6 @@ into tiles in a fixed grid pattern." data-placement="right" data-trigger="hover"
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.Vector#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.Vector#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -10489,13 +10227,6 @@ into tiles in a fixed grid pattern." data-placement="right" data-trigger="hover"
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.WMTS#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.WMTS#changed"/>
   
     <label class="is-function">changed</label>
@@ -10685,13 +10416,6 @@ into tiles in a fixed grid pattern." data-placement="right" data-trigger="hover"
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.XYZ#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.XYZ#changed"/>
   
     <label class="is-function">changed</label>
@@ -10870,13 +10594,6 @@ into tiles in a fixed grid pattern." data-placement="right" data-trigger="hover"
   <input class="toggle-symbol " align="" type="checkbox" value="ol.source.Zoomify#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.source.Zoomify#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -11719,13 +11436,6 @@ into tiles in a fixed grid pattern." data-placement="right" data-trigger="hover"
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.layer.Heatmap#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.layer.Heatmap#changed"/>
   
     <label class="is-function">changed</label>
@@ -11983,13 +11693,6 @@ resolutions.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.layer.Image#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.layer.Image#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -12255,13 +11958,6 @@ instantiated in apps.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.layer.Layer#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.layer.Layer#changed"/>
   
     <label class="is-function">changed</label>
@@ -12505,13 +12201,6 @@ instantiated in apps.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.layer.Base#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.layer.Base#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -12771,13 +12460,6 @@ instantiated in apps.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.layer.Group#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.layer.Group#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -13071,13 +12753,6 @@ organized by zoom levels for specific resolutions.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.layer.Tile#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.layer.Tile#changed"/>
   
     <label class="is-function">changed</label>
@@ -13359,13 +13034,6 @@ organized by zoom levels for specific resolutions.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.layer.Vector#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.layer.Vector#changed"/>
   
     <label class="is-function">changed</label>
@@ -13523,13 +13191,6 @@ organized by zoom levels for specific resolutions.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.DoubleClickZoom#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.DoubleClickZoom#changed"/>
   
     <label class="is-function">changed</label>
@@ -13667,13 +13328,6 @@ organized by zoom levels for specific resolutions.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.DragAndDrop#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.DragAndDrop#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -13857,13 +13511,6 @@ it to when the shift or other key is held down. " data-placement="right" data-tr
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.DragBox#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.DragBox#changed"/>
   
     <label class="is-function">changed</label>
@@ -13993,13 +13640,6 @@ it to when the shift or other key is held down. " data-placement="right" data-tr
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.DragPan#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.DragPan#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -14138,13 +13778,6 @@ on the map. " data-placement="right" data-trigger="hover">
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.DragRotateAndZoom#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.DragRotateAndZoom#changed"/>
   
     <label class="is-function">changed</label>
@@ -14277,13 +13910,6 @@ it to when the alt and shift keys are held down.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.DragRotate#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.DragRotate#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -14426,13 +14052,6 @@ it to when a key, shift by default, is held down." data-placement="right" data-t
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.DragZoom#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.DragZoom#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -14585,13 +14204,6 @@ it to when a key, shift by default, is held down." data-placement="right" data-t
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Draw#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Draw#changed"/>
   
     <label class="is-function">changed</label>
@@ -14723,13 +14335,6 @@ instantiated in apps.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Interaction#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Interaction#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -14883,13 +14488,6 @@ instantiated in apps.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.KeyboardPan#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.KeyboardPan#changed"/>
   
     <label class="is-function">changed</label>
@@ -15028,13 +14626,6 @@ instantiated in apps.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.KeyboardZoom#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.KeyboardZoom#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -15180,13 +14771,6 @@ instantiated in apps.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Modify#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Modify#changed"/>
   
     <label class="is-function">changed</label>
@@ -15328,13 +14912,6 @@ instantiated in apps.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.MouseWheelZoom#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.MouseWheelZoom#changed"/>
   
     <label class="is-function">changed</label>
@@ -15469,13 +15046,6 @@ on a touch screen." data-placement="right" data-trigger="hover">
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.PinchRotate#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.PinchRotate#changed"/>
   
     <label class="is-function">changed</label>
@@ -15606,13 +15176,6 @@ on a touch screen." data-placement="right" data-trigger="hover">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.PinchZoom#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.PinchZoom#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -15755,13 +15318,6 @@ events. " data-placement="right" data-trigger="hover">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Pointer#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Pointer#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -15921,13 +15477,6 @@ events. " data-placement="right" data-trigger="hover">
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Select#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Select#changed"/>
   
     <label class="is-function">changed</label>
@@ -15964,160 +15513,6 @@ events. " data-placement="right" data-trigger="hover">
 
 <li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Select#unByKey"/>
-  
-    <label class="is-function">unByKey</label>
-  
-</li> 
-
-
-    </ul>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol has-children" align="" type="checkbox" />
-    
-    <label class="tree-toggler toggleIcon is-class" data-toggle="popover" title="ol.interaction.Snap" data-content="Handles snapping of vector features while modifying or drawing them. " data-placement="right" data-trigger="hover">
-      Snap
-      <i></i>
-    </label>
-    <ul class="list-unstyled submenu nav nav-list tree" style="display: none;">
-    
-      <li>
-        <input class="toggle-symbol" type="checkbox" value="ol.interaction.Snap"/>
-         <label class="is-constructor">ol.interaction.Snap</label>
-      </li>
-    
-    
-    
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#addFeature"/>
-  
-    <label class="is-function">addFeature</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#removeFeature"/>
-  
-    <label class="is-function">removeFeature</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#getActive"/>
-  
-    <label class="is-function">getActive</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#setActive"/>
-  
-    <label class="is-function">setActive</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#bindTo"/>
-  
-    <label class="is-function">bindTo</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#get"/>
-  
-    <label class="is-function">get</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#getKeys"/>
-  
-    <label class="is-function">getKeys</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#getProperties"/>
-  
-    <label class="is-function">getProperties</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#set"/>
-  
-    <label class="is-function">set</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#setProperties"/>
-  
-    <label class="is-function">setProperties</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#unbind"/>
-  
-    <label class="is-function">unbind</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#unbindAll"/>
-  
-    <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#changed"/>
-  
-    <label class="is-function">changed</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#getRevision"/>
-  
-    <label class="is-function">getRevision</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#on"/>
-  
-    <label class="is-function">on</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#once"/>
-  
-    <label class="is-function">once</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#un"/>
-  
-    <label class="is-function">un</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.interaction.Snap#unByKey"/>
   
     <label class="is-function">unByKey</label>
   
@@ -19082,13 +18477,6 @@ instantiated in apps.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.dom.Input#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.dom.Input#changed"/>
   
     <label class="is-function">changed</label>
@@ -19282,13 +18670,6 @@ in the map. " data-placement="right" data-trigger="hover">
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.control.Attribution#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.control.Attribution#changed"/>
   
     <label class="is-function">changed</label>
@@ -19426,13 +18807,6 @@ screen. " data-placement="right" data-trigger="hover">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.control.Control#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.control.Control#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -19581,13 +18955,6 @@ screen. " data-placement="right" data-trigger="hover">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.control.FullScreen#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.control.FullScreen#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -19764,13 +19131,6 @@ screen. " data-placement="right" data-trigger="hover">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.control.MousePosition#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.control.MousePosition#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -19952,13 +19312,6 @@ defined map." data-placement="right" data-trigger="hover">
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.control.OverviewMap#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.control.OverviewMap#changed"/>
   
     <label class="is-function">changed</label>
@@ -20104,13 +19457,6 @@ defined map." data-placement="right" data-trigger="hover">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.control.Rotate#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.control.Rotate#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -20279,13 +19625,6 @@ viewport.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.control.ScaleLine#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.control.ScaleLine#changed"/>
   
     <label class="is-function">changed</label>
@@ -20423,13 +19762,6 @@ viewport.
   <input class="toggle-symbol " align="" type="checkbox" value="ol.control.Zoom#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.control.Zoom#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
@@ -20576,13 +19908,6 @@ viewport.
 </li> 
 
 <li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.control.ZoomSlider#unset"/>
-  
-    <label class="is-function">unset</label>
-  
-</li> 
-
-<li class="mainClass">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.control.ZoomSlider#changed"/>
   
     <label class="is-function">changed</label>
@@ -20720,13 +20045,6 @@ extent. " data-placement="right" data-trigger="hover">
   <input class="toggle-symbol " align="" type="checkbox" value="ol.control.ZoomToExtent#unbindAll"/>
   
     <label class="is-function">unbindAll</label>
-  
-</li> 
-
-<li class="mainClass">
-  <input class="toggle-symbol " align="" type="checkbox" value="ol.control.ZoomToExtent#unset"/>
-  
-    <label class="is-function">unset</label>
   
 </li> 
 
